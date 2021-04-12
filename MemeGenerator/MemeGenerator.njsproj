@@ -28,6 +28,25 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="client\build\asset-manifest.json" />
+    <Content Include="client\build\favicon.ico" />
+    <Content Include="client\build\index.html" />
+    <Content Include="client\build\logo192.png" />
+    <Content Include="client\build\logo512.png" />
+    <Content Include="client\build\manifest.json" />
+    <Content Include="client\build\robots.txt" />
+    <Content Include="client\build\static\css\main.8c8b27cf.chunk.css" />
+    <Content Include="client\build\static\css\main.8c8b27cf.chunk.css.map" />
+    <Content Include="client\build\static\js\2.d3aca885.chunk.js" />
+    <Content Include="client\build\static\js\2.d3aca885.chunk.js.LICENSE.txt" />
+    <Content Include="client\build\static\js\2.d3aca885.chunk.js.map" />
+    <Content Include="client\build\static\js\3.81772990.chunk.js" />
+    <Content Include="client\build\static\js\3.81772990.chunk.js.map" />
+    <Content Include="client\build\static\js\main.5a6894da.chunk.js" />
+    <Content Include="client\build\static\js\main.5a6894da.chunk.js.map" />
+    <Content Include="client\build\static\js\runtime-main.0228935d.js" />
+    <Content Include="client\build\static\js\runtime-main.0228935d.js.map" />
+    <Content Include="client\build\static\media\logo.6ce24c58.svg" />
     <Content Include="client\node_modules\.yarn-integrity" />
     <Content Include="client\node_modules\workbox-broadcast-update\BroadcastCacheUpdate.js" />
     <Content Include="client\node_modules\workbox-broadcast-update\BroadcastCacheUpdate.mjs" />
@@ -664,6 +683,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="client\" />
+    <Folder Include="client\build\" />
+    <Folder Include="client\build\static\" />
+    <Folder Include="client\build\static\css\" />
+    <Folder Include="client\build\static\js\" />
+    <Folder Include="client\build\static\media\" />
     <Folder Include="client\node_modules\" />
     <Folder Include="client\node_modules\%40babel\" />
     <Folder Include="client\node_modules\%40bcoe\" />

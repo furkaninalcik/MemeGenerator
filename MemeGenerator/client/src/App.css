@@ -7,6 +7,17 @@
   pointer-events: none;
 }
 
+.meme-generator-gif {
+    height: 20vmin;
+    pointer-events: none;
+    vertical-align: top;
+}
+
+.meme-upload {
+    height: 20vmin;
+    background-color : blueviolet
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -15,7 +26,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;

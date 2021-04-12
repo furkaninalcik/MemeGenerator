@@ -14,8 +14,9 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src="https://media.giphy.com/media/yjGdFXj16MHWtCh9aU/giphy.gif" className="meme-generator-gif" alt="logo" />
                 <p>{!data ? "Loading..." : data}</p>
+                <input type="file" id="file-input" name="ImageStyle" className="meme-upload" />
             </header>
         </div>
     );
