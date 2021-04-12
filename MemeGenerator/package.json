@@ -6,7 +6,6 @@
     "dependencies": {
         "express": "^4.17.1"
     },
-    "devDependencies": {},
     "scripts": {
         "start": "node server/index.js",
         "build": "cd client && npm install && npm run build"
@@ -15,6 +14,6 @@
     "author": "",
     "license": "ISC",
     "engines": {
-        "node": "14.16.1"
+        "node": ">=14.0.0"
     }
 }
