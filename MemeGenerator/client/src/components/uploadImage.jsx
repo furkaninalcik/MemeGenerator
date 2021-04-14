@@ -5,7 +5,8 @@ import axios from 'axios'
 class UploadImage extends Component {
     state = {
         selectedImage: null,
-        image: null
+        image: null,
+        memeURL: null
     };
 
     selectImage = (e) => {
@@ -20,6 +21,27 @@ class UploadImage extends Component {
 
     uploadSelectedImage = (e) => {
 
+        //axios.get("https://api.memegen.link/images/custom/_/my_background.png?background=http://www.gstatic.com/webp/gallery/1.png")
+        //    .then(res => {
+        //        console.log(res)
+        //
+        //        this.setState({
+        //            memeURL: 'https://api.memegen.link/images/custom/_/my_background.png?background=${this.state.image}'
+        //        })
+        //
+        //    })
+
+        //axios.post("/upload", {
+        //    imageData: this.state.selectedImage
+        //    })
+        //    .then(function (response) {
+        //        console.log(response);
+        //    })
+        //    .catch(function (error) {
+        //        console.log(error);
+        //    }
+        //)
+
 
 
     }
@@ -27,10 +49,12 @@ class UploadImage extends Component {
     render() {
         return (
             <div>
-                <input onChange={this.selectImage} type="file" id="file-input" name="ImageStyle" className="meme-upload" />
-                <button onClick={this.uploadSelectedImage}>Upload Image</button>
-                <p>{this.state.selectedImage && this.state.selectedImage.name}</p>
-                <img src={this.state.selectedImage && this.state.image} className="meme-generator-gif" alt="" />
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" name="baseImage" />
+                    <button>Submit</button>
+                </form>
+
+
             </div>
 
         );
