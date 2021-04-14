@@ -13,4 +13,6 @@
 
 # [START gae_quickstart_yaml]
 runtime: nodejs14
+env_variables:
+  GCLOUD_STORAGE_BUCKET: memegenerator-ceng495-hw1.appspot.com
 # [END gae_quickstart_yaml]
