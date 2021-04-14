@@ -667,6 +667,9 @@
     <Content Include="client\src\App.css" />
     <Content Include="client\src\App.js" />
     <Content Include="client\src\App.test.js" />
+    <Content Include="client\src\components\uploadImage.jsx">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="client\src\index.css" />
     <Content Include="client\src\index.js" />
     <Content Include="client\src\logo.svg" />
@@ -1831,6 +1834,7 @@
     <Folder Include="client\node_modules\yocto-queue\" />
     <Folder Include="client\public\" />
     <Folder Include="client\src\" />
+    <Folder Include="client\src\components\" />
     <Folder Include="server\" />
   </ItemGroup>
   <ItemGroup>
