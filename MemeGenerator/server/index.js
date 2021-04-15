@@ -123,7 +123,19 @@ const multer = Multer({
   },
 });
 
-const bucket = storage.bucket(process.env.GCLOUD_STORAGE_BUCKET);
+// -------- TO DO --------
+//console.log(`Your bucket is ${process.env.GCLOUD_STORAGE_BUCKET}`); // undefined
+//const dotenv = require('dotenv');
+//dotenv.config();
+//console.log(`Your bucket is ${process.env.GCLOUD_STORAGE_BUCKET}`); // "memegenerator-ceng495-hw1.appspot.com"
+//console.log(process.env); // 8626
+
+
+
+//console.log(process.env)
+const bucket = storage.bucket(process.env.GCLOUD_STORAGE_BUCKET || "memegenerator-ceng495-hw1.appspot.com" );
+//const bucket = storage.bucket(process.env.GCLOUD_STORAGE_BUCKET);
+//const bucket = storage.bucket("memegenerator-ceng495-hw1.appspot.com");
 // A bucket is a container for objects (files).
 
 
@@ -151,6 +163,13 @@ app.post('/upload', multer.single('baseImage'), (req, res, next) => {
     const publicUrl = format(
       `https://storage.googleapis.com/${bucket.name}/${blob.name}`
     );
+
+    //const elements = ['https://storage.googleapis.com/', bucket.name, blob.name];
+    //console.log(elements.join());
+    //const publicUrl = 
+    //    `https://storage.googleapis.com/${bucket.name}/${blob.name}`
+    //;
+
     res.status(200).send(publicUrl);
   });
 

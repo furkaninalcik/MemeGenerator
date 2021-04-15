@@ -676,6 +676,9 @@
     <Content Include="client\src\reportWebVitals.js" />
     <Content Include="client\src\setupTests.js" />
     <Content Include="client\yarn.lock" />
+    <Content Include="server\.env">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
     <Content Include="server\index.html">
