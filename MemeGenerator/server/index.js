@@ -1,6 +1,5 @@
 const express = require("express");
 const Multer = require("multer");
-const axios = require('axios').default;
 
 const PORT = process.env.PORT || 3001;
 
