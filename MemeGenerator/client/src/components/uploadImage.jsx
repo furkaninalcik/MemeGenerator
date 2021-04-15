@@ -51,6 +51,8 @@ class UploadImage extends Component {
             <div>
                 <form action="/upload" method="post" enctype="multipart/form-data">
                     <input type="file" name="baseImage" />
+                    <input type="text" name="topText" placeholder = "Top Text" />
+                    <input type="text" name="buttomText" placeholder="Buttom Text" />
                     <button>Submit</button>
                 </form>
 

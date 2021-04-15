@@ -5,11 +5,13 @@
     "main": "index.js",
     "dependencies": {
         "@google-cloud/storage": "^5.8.3",
+        "axios": "^0.21.1",
         "bootstrap": "^4.6.0",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "format-util": "^1.0.5",
         "multer": "^1.4.2",
+        "request": "^2.88.2",
         "util": "^0.12.3",
         "utils": "^0.3.1"
     },

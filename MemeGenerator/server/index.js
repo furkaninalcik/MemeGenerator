@@ -1,5 +1,6 @@
 const express = require("express");
 const Multer = require("multer");
+const axios = require('axios').default;
 
 const PORT = process.env.PORT || 3001;
 
@@ -17,7 +18,7 @@ app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 // Handle GET requests to /api route
 app.get("/api", (req, res) => {
-    res.json({ message: "Hello from server!" });
+    res.json({ message: "Upload an image and write your captions!" });
     console.log("api call")
 });
 
@@ -138,6 +139,70 @@ const bucket = storage.bucket(process.env.GCLOUD_STORAGE_BUCKET || "memegenerato
 //const bucket = storage.bucket("memegenerator-ceng495-hw1.appspot.com");
 // A bucket is a container for objects (files).
 
+const https = require('https')
+const options = {
+    hostname: 'api.memegen.link',
+    //port: 443,
+    path: '/images/custom/TOPTEXT/my_background.png?background=http://www.gstatic.com/webp/gallery/1.png',
+    method: 'GET'
+}
+
+const request = require('request')
+
+
+function createMeme(url, textData, res) {
+
+    var reqSettings = {
+        url: 'https://api.memegen.link/images/custom/' + textData.topText + '/' + textData.buttomText + '.png?background=' + url,
+        //url: 'https://api.memegen.link/images/custom/TOPTEXT/my_background.png?background=' + url,
+        method: 'GET',
+        encoding: null
+    };
+
+    request(reqSettings, (error, response, body) => {
+        res.status(200);
+        res.set('Content-Type', 'image/png');
+        res.send(body);
+    });
+
+
+
+
+
+    //const req = https.request(options, res => {
+    //    console.log(`statusCode: ${res.statusCode}`)
+    //
+    //    res.on('data', d => {
+    //        //process.stdout.write(d)
+    //    })
+    //
+    //    res.on('end', () => {
+    //        console.log('No more data in response.');
+    //    });
+    //
+    //
+    //})
+    //
+    //req.on('error', error => {
+    //    console.error(error)
+    //})
+    //
+    //req.end()
+
+   
+
+
+
+    //axios.get("https://api.memegen.link/images/custom/TOPTEXT/my_background.png?background=http://www.gstatic.com/webp/gallery/1.png")
+    //    .then(res => {
+    //        console.log(res.name)
+    //    
+    //        //this.setState({
+    //        //    memeURL: 'https://api.memegen.link/images/custom/_/my_background.png?background=${this.state.image}'
+    //        //})
+    //    
+    //    })
+}
 
 app.post('/upload', multer.single('baseImage'), (req, res, next) => {
   if (!req.file) {
@@ -170,7 +235,11 @@ app.post('/upload', multer.single('baseImage'), (req, res, next) => {
     //    `https://storage.googleapis.com/${bucket.name}/${blob.name}`
     //;
 
-    res.status(200).send(publicUrl);
+      //res.status(200).send(publicUrl);
+      console.log(req.body.topText);
+      console.log(req.body.buttomText);
+      createMeme(publicUrl, req.body , res ); // req.body holds the "topText" and the "buttomText" which will be placed on the image (texts and the image will be send to -> api.memegen.link)
+
   });
 
   blobStream.end(req.file.buffer);
