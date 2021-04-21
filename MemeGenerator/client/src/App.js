@@ -9,7 +9,7 @@ function App() {
     const gifURL = "https://media.giphy.com/media/yjGdFXj16MHWtCh9aU/giphy.gif"
 
     React.useEffect(() => {
-        fetch("/api")
+        fetch("/message")
             .then((res) => res.json())
             .then((data) => setData(data.message));
     }, []);
