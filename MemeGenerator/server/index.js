@@ -24,7 +24,7 @@ app.use(express.static(path.resolve(__dirname, '../client/build')));
 // Handle GET requests to /api route
 app.get("/message", (req, res) => {
     res.json({ message: "Upload an image and write your captions!" });
-    console.log("api call")
+    console.log("api call for message")
 });
 
 // All other GET requests not handled before will return our React app
