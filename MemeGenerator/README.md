@@ -1,6 +1,6 @@
 # MemeGenerator
 
-##Dependencies:
+## Dependencies:
 
 "@google-cloud/storage": "^5.8.3"
 
