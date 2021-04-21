@@ -1839,7 +1839,6 @@
     <Folder Include="client\src\" />
     <Folder Include="client\src\components\" />
     <Folder Include="server\" />
-    <Folder Include="server\images\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="client\node_modules\workbox-broadcast-update\BroadcastCacheUpdate.d.ts" />
