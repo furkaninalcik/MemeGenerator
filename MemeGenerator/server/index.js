@@ -14,7 +14,7 @@ const {format} = require('util');
 
 // resource for the code : https://cloud.google.com/appengine/docs/standard/nodejs/using-cloud-storage
 // some code snippets have been taken from Google Cloud documentation.
-// Also some files and codes have been created automatically by the commands such as "npm create-react-app" or "npm create-node-app"
+// Also some files and codes have been created automatically by the commands such as "npx create-react-app" 
 // Therefore some similarities with online resources may be found.
 
 
@@ -59,7 +59,7 @@ function createMeme(url, textData, res) {
 
     var reqSettings = {
 
-        url: 'https://api.memegen.link/images/custom/' + textData.topText + '/' + textData.buttomText + '.png?background=' + url,
+        url: 'https://api.memegen.link/images/custom/' + textData.topText + '/' + textData.bottomText + '.png?background=' + url,
         method: 'GET',
         encoding: null
     };
@@ -98,7 +98,7 @@ app.post('/upload', multer.single('baseImage'), (req, res, next) => {
             `https://storage.googleapis.com/${bucket.name}/${blob.name}`
         );
             
-        createMeme(publicUrl, req.body , res ); // req.body holds the "topText" and the "buttomText" which will be placed on the image (texts and the image will be send to -> api.memegen.link)
+        createMeme(publicUrl, req.body , res ); // req.body holds the "topText" and the "bottomText" which will be placed on the image (texts and the image will be send to -> api.memegen.link)
 
     });
 

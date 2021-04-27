@@ -24,7 +24,7 @@ class UploadImage extends Component {
                 <form action="/upload" method="post" enctype="multipart/form-data">
                     <input type="file" onChange={this.selectImage} name="baseImage" />
                     <input type="text" name="topText" placeholder = "Top Text" />
-                    <input type="text" name="buttomText" placeholder="Buttom Text" />
+                    <input type="text" name="bottomText" placeholder="Bottom Text" />
                     <button>Submit</button>
                 </form>
                 <div>
