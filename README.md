@@ -47,3 +47,9 @@
 'npm start'
 
 Note: Since the system uses Google Cloud Storage, the file upload will not be allowed due to authentication. The service key can be provided for testing on local if it is necessary.
+
+## How to build the client
+
+(in the "client" folder)
+'npm install react-scripts' 
+'npm run build'
