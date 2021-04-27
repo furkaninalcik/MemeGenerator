@@ -7,7 +7,7 @@
 - Google Cloud Storage was used as the storage service to manage data on App Engine.
 
 - API used for meme creation: "memegen" by jacebrowning
- - Resource: https://github.com/jacebrowning/memegen
+  - Resource: https://github.com/jacebrowning/memegen
 
 ## Dependencies:
 
