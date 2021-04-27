@@ -51,5 +51,7 @@ Note: Since the system uses Google Cloud Storage, the file upload will not be al
 ## How to build the client
 
 (in the "client" folder)
+
 'npm install react-scripts' 
+
 'npm run build'
