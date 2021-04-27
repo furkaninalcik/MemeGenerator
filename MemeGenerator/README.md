@@ -2,12 +2,12 @@
 
 ## Programming Languages, Frameworks and Tools
 
-Frontend was developed with React.
-Backend was developed with Node.js, Express framework.
-Google Cloud Storage was used as the storage service to manage data on App Engine.
+- Frontend was developed with React.
+- Backend was developed with Node.js, Express framework.
+- Google Cloud Storage was used as the storage service to manage data on App Engine.
 
-API used for meme creation: "memegen" by jacebrowning
-Resource: https://github.com/jacebrowning/memegen
+- API used for meme creation: "memegen" by jacebrowning
+ - Resource: https://github.com/jacebrowning/memegen
 
 ## Dependencies:
 
@@ -37,7 +37,7 @@ Resource: https://github.com/jacebrowning/memegen
 
 3- Write your captions (top text and bottom text)
 
-4- Submit and wait for a few secconds
+4- Submit and wait for a few seconds
 
 5- Your meme is ready!
 
